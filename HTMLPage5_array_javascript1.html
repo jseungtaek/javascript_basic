@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+
+    <script>
+
+        var Array1 = new Array();
+        console.log(typeof Array1);
+        Array1[0] = "a";
+        Array1[1] = 123;
+        Array1[4] = true;
+        console.log(Array1);
+        console.log("Array1.length:"+Array1.length);
+
+        var Array2 = new Array(5);
+        console.log(Array2);
+
+        var Array3 = new Array(123, "ABC", true);
+        console.log(Array3);
+
+        var Array4 = [1, "A", true, {}];
+        console.log(Array4);
+
+        /*Array method*/
+
+        //index of()
+
+        var arrayindex = new Array(123, "abc", "가나다", "123", "ABC","가나다");
+        console.log("arrayindex.indexof(\"가나다\") : " + arrayindex.indexOf("가나다")); //2
+        console.log("arrayindex.lastindexof(\"가나다\") : " + arrayindex.lastIndexOf("가나다")); //5
+        console.log("arrayindex.indexof(\"123\") : " + arrayindex.indexOf("123")); //3
+        console.log("arrayindex.indexof(123) : " + arrayindex.indexOf(123)); //0
+        console.log("arrayindex.indexof(\"abc\") : " + arrayindex.indexOf("abc"));
+
+        //concat()
+
+        var arrayfir = new Array("abc", "def", "ghi", "jkl");
+        var arraysec = new Array("가나다", "라마바", "사아자", "자차카");
+        var arrayres = arrayfir.concat(arraysec);
+
+        console.log(arrayfir);
+        console.log(arraysec);
+        console.log(arrayres);
+
+        //join()
+
+        var arrayjoin = new Array("ab", "cd", "ef", "gh");
+        console.log(arrayjoin.join());
+        console.log(arrayjoin.join("|"));
+        console.log(arrayjoin.join(":"));
+        console.log(arrayjoin.toString());
+
+        //sort()
+
+        var arraysort = new Array("e", "b", "a", "c", "d");
+        console.log(arraysort);
+        console.log(arraysort.sort());
+        console.log(arraysort);
+
+        //reverse()
+
+        var arrayreverse = new Array("e", "b", "a", "c", "d");
+        console.log(arrayreverse);
+        console.log(arrayreverse.reverse());
+        console.log(arrayreverse);
+
+        //push()
+
+        var arraypush = new Array("abc", "def");
+        console.log(arraypush.push("가나다", "라마바"));
+        console.log(arraypush);
+
+        //shift(), pop()
+
+        var arrayshiftpop = new Array("가", "나", "다", "라", "마");
+        console.log(arrayshiftpop.shift());
+        console.log(arrayshiftpop);
+
+        console.log(arrayshiftpop.pop());
+        console.log(arrayshiftpop);
+
+        arrayshiftpop.unshift("가");
+        arrayshiftpop[arrayshiftpop.length] = "마";
+        console.log(arrayshiftpop);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
