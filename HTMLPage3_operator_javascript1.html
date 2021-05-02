@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+        var varTemp1 = 100;
+        var varTemp2 = 200;
+        var varTemp3 = varTemp1 + varTemp2;
+        console.log("varTemp1+varTemp2=" + varTemp3);
+
+        varTemp2 = 1000;
+        var varTemp3 = varTemp1 + varTemp2;
+        console.log("varTemp1+varTemp2=" + varTemp3); /*assignment 할당*/
+
+        var num1 = 10;
+        var num2 = 3;
+        var result = 0;
+        //The four fundamental arithmetic operations
+        result = num1 + num2;
+        console.log("num1 + num2 = " + result); //addition
+        result = num1 * num2;
+        console.log("num1 * num2 = " + result); //multiplication
+        result = num1 / num2;
+        console.log("num1 / num2 = " + result); //divide
+        result = num1 - num2;
+        console.log("num1 - num2 = " + result); //substraction
+        result = num1 % num2;
+        console.log("num1 % num2 = " + result); //remaining operator
+
+        //increasing and decreasing operator
+
+        var inc1 = 10, inc2 = 10, inc3 = 0;
+        var dec1 = 10, dec2 = 10, dec3 = 0;
+
+        inc1 = ++inc1;
+        dec1 = --dec1;
+
+        inc2 = inc3++;
+        dec2 = dec3--;
+
+        inc3 = inc3;
+        dec3 = dec3;
+
+
+        console.log("inc1=" + inc1, "inc2=" + inc2, "inc3=" + inc3);
+        console.log("dec1=" + dec1, "dec2=" + dec2, "dec3=" + dec3);
+
+        //comparative operator
+
+        var comnum = 5;
+
+        console.log(comnum > 10);
+        console.log(comnum < 10);
+        console.log(comnum >= 10);
+        console.log(comnum <= 10);
+        console.log(comnum == 5);
+        console.log(comnum != 5);
+
+        //logic operator
+
+        var logic1 = true;
+        var logic2 = false;
+
+        console.log(logic1 && logic2); //true && false => false , and operation
+        console.log(logic1 || logic2); //ture || false => ture , or operation
+
+        logic2 = true;
+        console.log(logic1 && logic2); //true && true => true , and operation
+        console.log(logic1 || logic2); //ture || ture => true , or operation
+
+        logic1 = false;
+        logic2 = false;
+        console.log(logic1 && logic2); //false && false => false , and operation
+        console.log(logic1 || logic2); //false || false => false , or operation
+
+        //negative operation
+
+        var tru2 = true;
+        console.log(tru2);
+        console.log(!tru2);
+
+        //complex operator
+
+        var complex = 1000;
+        result = complex;
+
+        result += 3;
+        console.log(result);
+
+        result = complex;
+        result -= 3;
+        console.log(result);
+
+        result = complex;
+        result *= 3;
+        console.log(result);
+
+        result = complex;
+        result /= 3;
+        console.log(result);
+
+        result = complex;
+        result %= 3;
+        console.log(result);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
