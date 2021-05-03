@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        for (var i = 0; i < 10; i++)
+            console.log("i : " + i);
+
+        var array = [6, 7, 8, 9, 10];
+
+        for (var i = 0; i < array.length; i++)
+            console.log("array["+i+"] : " + array[i]);
+
+        for (var a in array)
+            console.log("array[" + a + "] : " + array[a]);
+
+        var num = 0;
+        var sum = 0;
+        while (num < 10) {
+
+            console.log("num : " + num);
+            sum += num;
+            num++;
+        }
+        console.log("sum : " + sum);
+
+        var number = 100;
+        do {
+            console.log("number : " + number);
+            number++;
+        }
+        while (number < 102)
+
+        var result = new Array();
+        var a = 0;
+
+        for (var i = 0; i < 10; i++) {
+
+            if ((i % 2 == 0) || (i % 3 == 0)) continue;
+
+            console.log("i : " + i);
+            result[a] = i;
+            a++;
+        }
+        console.log(result);
+
+        var num1 = 0;
+        var sum1 = 0;
+        while (num1 < 10) {
+            console.log("num1 : " + num1);
+            sum1 += num1;
+            num1++;
+
+            if (sum1 > 20) {
+                console.log("sum1 : " + sum1);
+                break;
+            }
+        }
+        for (var i = 0; true; i++) {
+            console.log("i : " + i);
+            if (i > 10) break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
