@@ -34,12 +34,15 @@
         console.log("arrayindex.indexof(\"123\") : " + arrayindex.indexOf("123")); //3
         console.log("arrayindex.indexof(123) : " + arrayindex.indexOf(123)); //0
         console.log("arrayindex.indexof(\"abc\") : " + arrayindex.indexOf("abc"));
+        console.log("arrayindex.indexof(\"abc\") : " + arrayindex.indexOf("abc")); //1
 
         //concat()
 
         var arrayfir = new Array("abc", "def", "ghi", "jkl");
+        var arrayfir = new Array("abc", "def", "ghi", "jkl"); 
         var arraysec = new Array("가나다", "라마바", "사아자", "자차카");
         var arrayres = arrayfir.concat(arraysec);
+        var arrayres = arrayfir.concat(arraysec); // abc def ghi jkl 가나다 라마바 사아자 자차카
 
         console.log(arrayfir);
         console.log(arraysec);
@@ -52,6 +55,10 @@
         console.log(arrayjoin.join("|"));
         console.log(arrayjoin.join(":"));
         console.log(arrayjoin.toString());
+        console.log(arrayjoin.join()); // ab,cd,ef,gh
+        console.log(arrayjoin.join("|")); // ab|cd|ef|gh
+        console.log(arrayjoin.join(":")); //ab:cd:ef:gh
+        console.log(arrayjoin.toString()); //ab,cd,ef,gh
 
         //sort()
 
@@ -59,6 +66,9 @@
         console.log(arraysort);
         console.log(arraysort.sort());
         console.log(arraysort);
+        console.log(arraysort); //ebacd
+        console.log(arraysort.sort()); //abcde
+        console.log(arraysort); //abcde
 
         //reverse()
 
@@ -66,24 +76,35 @@
         console.log(arrayreverse);
         console.log(arrayreverse.reverse());
         console.log(arrayreverse);
+        console.log(arrayreverse); //ebacd
+        console.log(arrayreverse.reverse()); //dcabe
+        console.log(arrayreverse); //dcabe
 
         //push()
 
         var arraypush = new Array("abc", "def");
         console.log(arraypush.push("가나다", "라마바"));
         console.log(arraypush);
+        console.log(arraypush.push("가나다", "라마바")); //4 array length
+        console.log(arraypush); //abc def 가나다 라마바
 
         //shift(), pop()
 
         var arrayshiftpop = new Array("가", "나", "다", "라", "마");
         console.log(arrayshiftpop.shift());
         console.log(arrayshiftpop);
+        console.log(arrayshiftpop.shift()); // first index 가 del
+        console.log(arrayshiftpop); // 나 다 라 마
 
         console.log(arrayshiftpop.pop());
         console.log(arrayshiftpop);
+        console.log(arrayshiftpop.pop()); // last index 마 del
+        console.log(arrayshiftpop); // 나 다 라
 
         arrayshiftpop.unshift("가");
         arrayshiftpop[arrayshiftpop.length] = "마";
+        arrayshiftpop.unshift("가"); // It is added to the first of the arrangement. 가 나 다 라
+        arrayshiftpop[arrayshiftpop.length] = "마"; //arrayshiftpop[4]=마 ==> 가 나 다 라 마
         console.log(arrayshiftpop);
 
     </script>
