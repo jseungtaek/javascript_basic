@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        //return function
+        function func() {
+
+            return function (x) {
+                for (i = 0; i < 10; i++)
+                    console.log(x + "*" + i + "=" + (x * i));
+            }
+        }
+
+        var refunc = func();
+        refunc(4);
+
+        // closer
+        function clofunc(x) {
+            var name = x + "에 대한 구구단";
+            return function () {
+                console.log(name);
+                for (i = 0; i < 10; i++)
+                    console.log(x + "*" + i + "=" + (x * i));
+            }
+        }
+
+        var cloresult = clofunc(6);
+        cloresult();
+
+        //inner function
+        function outfunc(x, y) {
+
+            console.log("triangle : " + tri());
+            console.log("quadrangle : " + squ());
+
+            function tri() {
+                return (x * y) / 2;
+            }
+            function squ() {
+                return (x * y);
+            }
+
+        }
+        outfunc(4, 5);
+
+        //callback function
+
+        function funname(funCBF, funCBP, num) {
+
+            for (var i = 0; i < 10; i++) {
+                console.log(num + "*" + i + "=" + (num * i));
+                if (i < 10) funCBP(i);
+            }
+            funCBF();
+        }
+        function callbackprocess(n) {
+            console.log(n*10+"% 진행 완료");
+        }
+        function callbackfunction() {
+            console.log("100% 진행, server finish!");
+        }
+
+        funname(callbackfunction, callbackprocess, 15);
+
+        //time function
+
+        var settime = setTimeout(function () { alert("3초후에 한번 실행"); }, 3000); //ms
+        //clearTimeout(settime);
+        var setin = setInterval(function () { console.log("2초마다 실행") }, 2000);
+        //clearInterval(setin);
+
+        var printsettimeout = setTimeout(function () {clearInterval(printinterval); console.log("finish!")}, 7000);
+
+        var printinterval = setInterval(function () { console.log("**") }, 1500);
+
+        //eval function
+        //문자열을 코드로 이용
+
+        var varEval = "console.log('eval function practice')";
+        console.log(varEval); //console.log('eval function practice')
+        eval(varEval); // eval function practice
+
+        varEval = "document.write('<p>Eval function on screen</p>')"; // used p tag result, display web page.
+        eval(varEval);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
