@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        //function
+        //명시적 선언 함수
+        function funname() {
+            console.log("명시(선언)적 함수의 기능을 실행");
+        }
+        //익명 함수
+        var funanonymous = function () {
+            console.log("익명 함수의 기능을 실행");
+        }
+
+        funname();
+        funanonymous();
+
+        console.log("funname 함수 보기 : " + funname);
+        console.log("funname 함수 실행 : " + funname());
+        console.log("funanonymous 함수 보기 : " + funanonymous);
+        console.log("funanonymous 함수 실행 : " + funanonymous());
+
+        //parameter, result
+
+        function parameter(x, y, z) {
+            console.log("x : " + x);
+            console.log("y : " + y);
+            console.log("z : " + z);
+
+            var result = x * y + z;
+
+            return result;
+        }
+
+        var para_result = 0;
+
+        para_result = parameter(1, 2, 4);
+        console.log("para_result : " + para_result); // 1*2+4 = 6
+
+        para_result = parameter(2, 3, 4, 5);
+        console.log("para_result : " + para_result); // 2*3+4 = 10
+
+        para_result = parameter(1, 2);
+        console.log("para_result : " + para_result); // nan;
+
+        var argu_array;
+
+        function argu_a() {
+            return arguments;
+        }
+        argu_array = argu_a(7, 6, 5, 4, 3, 2, 2, 2, 1, 1);
+        console.log("argu_array : " + argu_array);
+        console.log("argu_array.length : " + argu_array.length); //10
+
+        for (var i in argu_array)
+            console.log("argu_array[" + i + "] : " + argu_array[i]);
+
+        argu_array = argu_a("가", "나", "다", "라", "마", "바", "사", "아", "자",);
+        console.log("argu_array : " + argu_array);
+        console.log("argu_array.length : " + argu_array.length); //9
+
+        for (var i in argu_array)
+            console.log("argu_array[" + i + "] : " + argu_array[i]);
+
+        //function excution order
+
+        fun1(); //normal operation
+        //fun2(); //error
+
+        function fun1() {
+            console.log("fun1 !");
+        }
+        var fun2 = function () {
+            console.log("fun2 !");
+        }
+
+        fun2(); //normal operation
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
