@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        //object
+
+        var objname = {
+            num: 123,
+            str: "abc",
+            boo: true,
+            fun: function () { },
+            obj: {},
+            arr: [1, 2, 3],
+            ude: undefined
+        };
+
+        console.log("objname : " + objname);
+
+        // this keyword => in object
+
+        var objCar = {
+            width: "3m",
+            height: "2m",
+            cc: "2000cc",
+            energy: 100,
+            speed: function (power) {
+                return this.energy * power;
+            }
+        };
+        console.log("objCar.width : " + objCar.width);
+        console.log("objCar.height : " + objCar.height);
+        console.log("objCar.speed : " + objCar.speed(5));
+
+        // object access using .
+
+        var objna = {
+            nation: "korea",
+            capital: "seoul",
+            language: "korean",
+            population: 50000000,
+            nationAnthem: function () {
+                console.log("play korean national anthem");
+            }
+        };
+        console.log("objna.nation : " + objna.nation);
+        console.log("objna.population : " + objna.population);
+
+        console.log("objna.[\"nation\"] : " + objna["nation"]);
+        console.log("objna.[\"population\"] : " + objna["population"]);
+
+        objna.nationAnthem();
+
+        // object access using for~in
+
+        var print = "";
+        for (var key in objna) {
+            print += key + ":" + objna[key] + "\n";
+        }
+        console.log(print);
+
+        // add and del
+
+        objna.trad_food = "kimchi";
+        print = "";
+        for (var key in objna) {
+            print += key + ":" + objna[key] + "\n";
+        }
+        console.log(print);
+
+        delete objna.trad_food;
+        print = "";
+        for (var key in objna) {
+            print += key + ":" + objna[key] + "\n";
+        }
+        console.log(print);
+
+        //in, with keyword
+
+        console.log("nation" in objna);
+        console.log("place" in objna);
+
+        with (objna) {
+            console.log("nation : " + nation);
+            console.log("capital : " + capital);
+            console.log("population : " + population);
+            console.log("nationAnthem : " + nationAnthem);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

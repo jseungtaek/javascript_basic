@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        //create object using function
+
+        function createCar(name, color, speed) {
+            
+            var carobj = {
+                name: name,
+                color: color,
+                speed: speed,
+                run: function () {
+                    return this.speed + "km/h";
+                }
+            }
+            return carobj;
+        }
+
+
+        var porsche = createCar("porsche", "yellow", 300);
+        console.log("porsche.name : " + porsche.name); //porsche
+        console.log("porsche.run : " + porsche.run()); //300km/h
+
+        //create object using constructor
+
+        function airplane(name, color, speed) {
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function () {
+                return this.speed + " go high!";
+            }
+        }
+
+        var boeing747 = new airplane("boeing747", "blue", "600km/h");
+        console.log("boeing747.name : " + boeing747.name); //boeing747
+        console.log("boeing747.color : " + boeing747.color); //blue
+        console.log("boeing747.fly : " + boeing747.fly()); //600km/h go high!
+
+        //prototype
+
+        function Scoring(player, scorefirst, scoresecond, scorethird) {
+
+            this.player = player;
+            this.scorefirst = scorefirst;
+            this.scoresecond = scoresecond;
+            this.scorethird = scorethird;
+
+           /* this.getTotal = function () {
+                return this.scorefirst + this.scoresecond + this.scorethird;
+            }
+            this.getAverage = function () {
+                return (this.getTotal() / 3).toFixed(3);
+                //toFixed() fixed 소수점
+                //toFixed(3) 3자리까지
+            }*/
+        }
+
+        Scoring.prototype.getTotal = function () {
+            return this.scorefirst + this.scoresecond + this.scorethird;
+        }
+        Scoring.prototype.getAverage = function () {
+            return (this.getTotal() / 3).toFixed(3);
+        }
+
+        var player1 = new Scoring("Kim", 91, 92, 93);
+        console.log(player1.player + "'s Total : " + player1.getTotal());
+        console.log(player1.player + "'s Average : " + player1.getAverage());
+
+        var player2 = new Scoring("Lee", 84, 96, 92);
+        console.log(player2.player + "'s Total : " + player2.getTotal());
+        console.log(player2.player + "'s Average : " + player2.getAverage());
+
+        var player3 = new Scoring("Jeon", 100, 98, 96);
+        console.log(player3.player + "'s Total : " + player3.getTotal());
+        console.log(player3.player + "'s Average : " + player3.getAverage());
+
+        //getter, setter
+
+        function BMICalculator() {
+
+            var weight = 0;
+            var height = 0;
+
+            this.bmi = function () {
+                return (this.weight / (this.height * this.height)).toFixed(2);
+            }
+
+            this.getHeight = function () {
+                return this.height;
+            }
+            this.setHeight = function (height) {
+                if (!isNaN(height)) {
+                    this.height = height;
+                }
+                else
+                    console.log("height is NaN(Not a number)");
+            }
+
+            this.getWeight = function () {
+                return this.weight;
+            }
+            this.setWeight = function (weight) {
+                if (!isNaN(weight)) {
+                    this.weight = weight;
+                }
+                else
+                    console.log("weight is NaN(Not a number)");
+            }
+        }
+
+        var myBMI = new BMICalculator();
+        myBMI.setHeight(1.7);
+        myBMI.setWeight(90);
+        console.log("myBMI.bmi : " + myBMI.bmi());
+    </script>
+</head>
+<body>
+
+</body>
+</html>
