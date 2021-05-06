@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+        //window object
+
+        window.alert("window object");
+        alert("window object");
+
+        window.console.log("window object");
+        console.log("window object");
+
+        //window.open("http://www.google.com", "openWindow", "width-500,height=300");
+
+        var newWindow = window.open("http://www.google.com", "google", "width-500,height-300");
+
+        //position
+        newWindow.moveTo(50, 50);
+        for (var i = 0; i < 1000; i++)
+            newWindow.moveBy(1, 1);
+
+        //size
+        newWindow.resizeTo(500, 600);
+        for (var i = 0; i < 200; i++)
+            newWindow.resizeBy(-1, -1);
+
+        //onload() event
+        window.onload = function () {
+            console.log("first");
+        }
+
+        //screen object
+        function openwin(url, width, height) {
+            console.log("screen.width : " + screen.width);
+            console.log("screen.height : " + screen.height);
+
+            var left = screen.width / 2 - width / 2; //center
+            var top = screen.height / 2 - height / 2; //center
+            var opt = "width = " + width + ",height=" + height + ",left=" + left + ",top=" + top;
+
+            open(url, "newwin", opt);
+        }
+        openwin("http://www.naver.com", 800, 600);
+
+        //Location object
+
+        window.onload = function () {
+            //location.href = "http://www.google.com";
+            //location.assign("http://www.google.com");
+            //location.replace("http://www.google.com");
+
+            setTimeout(function(){
+                console.log("Location.reload");
+                location.reload();
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        console.log("second");
+    </script>
+    <script>
+        console.log("third");
+    </script>
+</body>
+</html>
