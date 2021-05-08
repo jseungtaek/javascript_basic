@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+
+        window.onload = function () {
+            var elementNode = document.createElement("p");
+            var textNode = document.createTextNode("javascript&node.js");
+
+            elementNode.appendChild(textNode);
+            document.body.appendChild(elementNode);
+        }
+
+        window.onload = function () {
+            /*  var imgNode = document.createElement("img");
+              imgNode.src = "./img/emblem.png";
+              imgNode.width = "170";
+              imgNode.height = "67";
+  
+              document.body.appendChild(imgNode);
+          */
+
+            var imgNode = document.createElement("img");
+            imgNode.setAttribute("src", "web_language/emblem.png");
+            imgNode.setAttribute("width", 300);
+            imgNode.setAttribute("heigh", 120);
+            imgNode.setAttribute("tempData", "logoimg");
+
+            document.body.appendChild(imgNode);
+
+            var str = "";
+            str += "<p id='jstitle'>javascript&node.js</p>";
+            str += "<img id='logoimg', src='web_language/emblem.png',";
+            str += "width'170',height='67',tempData='logoImg'>";
+
+            document.body.innerHTML = str;
+
+            var titleNode = document.getElementById('jstitle');
+            titleNode.innerHTML = "JS&NODE.js";
+
+            var logoNode = document.getElementById("logoimg");
+            logoNode.setAttribute("src", "./img/asdf.jpg");
+            logoNode.setAttribute("width", 123);
+            logoNode.setAttribute("height", 111);
+
+            /*
+            var titleParentNode = document.getElementById("jstitle");
+            titleParentNode.parentNode.removeChild(titleParentNode);
+
+            var logoParentNode = document.getElementById("logoimg");
+            logoParentNode.parentNode.removeChild(logoParentNode);
+            */
+
+            titleNode.style.fontSize = "1.5em";
+            titleNode.style.border = "1px solid#cccccc";
+
+            logoNode.style.width = "200px";
+            logoNode.style.height = "100px";
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>=
