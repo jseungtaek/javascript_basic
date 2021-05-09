@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+        window.onload = function() {
+
+            function addhandler(e) {
+                console.log("click!");
+                console.log("this : " + this);
+
+                //IE8 이전 고려
+                var event = e || window.event;
+                for (var key in event) {
+                    console.log(key + " : " + event[key]);
+                }
+
+                this.style.backgroundColor = "#0000ff";
+            }
+
+            var objd = document.getElementById("objdiv");
+            objd.addEventListener("click", addhandler, false);
+
+            var objp = document.getElementById("objpar");
+            objp.addEventListener("click", addhandler, false);
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #objdiv {
+            font-size: 1.2em;
+            font-weight: bolder;
+            width: 200px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: red;
+            color: white;
+        }
+
+        #objpar {
+            font-size: 1.2em;
+            font-weight: bolder;
+            width: 200px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="objdiv">object division</div>
+    <p id="objpar">object paragraph</p>
+</body>
+</html>

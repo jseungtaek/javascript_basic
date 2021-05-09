@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+        window.onload = function () {
+            function addhandler() {
+                console.log("click!");
+            }
+
+            function removerhandler() {
+                console.log("event remove!");
+                cea.removeEventListener("click", addhandler, false);
+            }
+
+            var cea = document.getElementById("ceventadd");
+            cea.addEventListener("click", addhandler, false);
+
+            var cer = document.getElementById("ceventrem");
+            cer.addEventListener("click", removerhandler, false);
+        }
+    </script>
+    <style>
+        *{
+            margin:0; padding:0;
+        }
+        #ceventadd {
+            font-size: 1.2em;
+            font-weight: bolder;
+            width: 200px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: red;
+            color: white;
+        }
+        #ceventrem {
+            font-size: 1.2em;
+            font-weight: bolder;
+            width: 200px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="ceventadd">click event</div>
+    <div id="ceventrem">remove event</div>
+</body>
+</html>
