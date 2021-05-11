@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script>
+        window.onload = function () {
+
+            var me = document.getElementById("mouseEvent");
+            me.addEventListener("click", function () { console.log("click Event!") }, false);
+
+            me.addEventListener("mouseover", function () { console.log("mouseover Event!") }, false);
+
+            me.addEventListener("mouseout", function () { console.log("mouseout Event!") }, false);
+
+            me.addEventListener("mousemove", function () { console.log("mousemove Event!") }, false);
+        }
+    </script>
+    <style>
+        #mouseEvent {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouseEvent">mouse event</div>
+</body>
+</html>
