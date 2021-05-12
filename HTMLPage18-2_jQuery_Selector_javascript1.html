@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+
+            $("*").css("fontSize", "1.1em");
+            $("li").css("listStyle", "none").css("color", "#0000ff");
+            $("#item").css("background", "#ffff00").css("width", "300px");
+            $(".seoul").css("background", "#ff0000");
+            $("#wrap p").css("border", "1px solid#cccccc");
+            $("#wrap > p").css("border", "5px solid#cccccc");
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>jQuery selector</p>
+        <div id="center">
+            <h1>centent</h1>
+            <p>가나다라마바사아자차카타파하</p>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        </div>
+        <div id="item">
+            <ul>
+                <li class="seoul">서울</li>
+                <li class="gyeonggido">경기도</li>
+                <li>강원도</li>
+                <li>충청도</li>
+                <li>경상도</li>
+                <li>제주도</li>
+                <li>전라도</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
