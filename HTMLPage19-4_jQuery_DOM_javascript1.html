@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //var co = $("#wrap > .content1 > .p").clone();
+           // co.appendTo($("#wrap > .content1"));
+
+            //$("#wrap > .content1 > .p").clone().appendTo($("#wrap>.content1"));
+            $("#wrap > .content1").append($("#wrap > .content1 > .p").clone());
+        })
+    </script>
+    <style>
+        #wrap .content1 .p{
+            background:#ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="content1">
+            <p class="p">content</p>
+        </div>
+    </div>
+</body>
+</html>

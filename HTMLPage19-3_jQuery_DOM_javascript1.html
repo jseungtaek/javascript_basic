@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#wrap > .content1 > .p").appendTo($("#wrap > .content2"));
+        })
+    </script>
+
+    <style>
+        #wrap .content1 .p{
+            background:#ff0000;
+        }
+        #wrap .content2 .p{
+            background:#ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="content1">
+            <p class="p">content1</p>
+        </div>
+        <div class="content2">
+            <p class="p">content2</p>
+        </div>
+    </div>
+</body>
+</html>

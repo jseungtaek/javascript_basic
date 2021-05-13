@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var wrapObj = $("#wrap");
+
+        /*객체생성*/
+
+            var divObj = $("<div>Hello jQuery!</div>");
+
+            //객체추가
+
+          //  divObj.appendTo(wrapObj);
+          //  wrapObj.append(divObj);
+          //  divObj.prependTo(wrapObj);
+          //  wrapObj.prepend(divObj);
+
+          //  divObj.insertAfter(wrapObj);
+          //  wrapObj.after(divObj);
+            divObj.insertBefore(wrapObj);
+          //  wrapObj.before(divObj);
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div>content</div>
+    </div>
+</body>
+</html>
