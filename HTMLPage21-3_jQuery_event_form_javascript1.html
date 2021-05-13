@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#loginform").submit(function (event) {
+                if ($("#uid").val() == "") {
+                    alert("user id blank!");
+                    event.preventDefault();
+                }
+                else if ($("#upw").val() == "") {
+                    alert("user pw blank!");
+                    event.preventDefault();
+                }
+                else {
+                    alert("login success!");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form id="loginform" action="http://www.google.com">
+        USER ID : <input id="uid" type="text" name="uid" /><br />
+        USER PW : <input pw="upw" type="password" name="upw" /><br />
+        <input id="sbmbtn" type="button" value="submit" />
+        <input id="resbtn" type="button" value="reset" />
+    </form>
+</body>
+</html>

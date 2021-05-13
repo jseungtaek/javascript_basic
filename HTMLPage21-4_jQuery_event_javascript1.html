@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            function eventHandler(event) {
+                console.log("click!");
+                console.log("this : " + this);
+
+                for (var key in event) {
+                    console.log(key + ":" + event[key]);
+                }
+            }
+
+            $("#objDiv").click(eventHandler);
+            $("#objpar").click(eventHandler);
+        })
+    </script>
+</head>
+<body>
+    <div id="objDiv">object division</div>
+    <p id="objpar">object paragraph</p>
+</body>
+</html>

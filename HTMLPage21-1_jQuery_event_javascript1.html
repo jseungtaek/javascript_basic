@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*$(".logo").click(function () {
+                console.log("logo img click!");
+            })*/
+
+            $(".logo").click(imgClickEventListener);
+
+            function imgClickEventListener() {
+                console.log("logo image click!");
+                console.log("called imgClickEventListener");
+            }
+        })
+
+        
+    </script>
+</head>
+<body>
+    <div>
+        <img class="logo" src="img/emblem.jpg" />
+    </div>
+</body>
+</html>

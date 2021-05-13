@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ediv").click(function () {
+                console.log("click event!")
+            })
+             $("#ediv").dblclick(function () {
+                 console.log("dblclick event!")
+             })
+             $("#ediv").mousedown(function () {
+                 console.log("mousedown event!")
+             })
+             $("#ediv").mouseenter(function () {
+                 console.log("mouseenter event!")
+             })
+             $("#ediv").mouseleave(function () {
+                 console.log("mouseleave event!")
+             })
+             $("#ediv").mousemove(function () {
+                 console.log("mousemove event!")
+             })
+             $("#ediv").mouseout(function () {
+                 console.log("mouseout event!")
+             })
+             $("#ediv").mouseover(function () {
+                 console.log("mouseover event!")
+             })
+             $("#ediv").mouseup(function () {
+                 console.log("mouseup event!")
+             })
+        })
+    </script>
+    <style>
+        #ediv{
+            width:300px; height:300px;
+            background:red;
+            line-height:300px;
+            text-align:center;
+            font-weight:bold;
+            font-size:2em;
+            color:white;
+            margin:0; padding:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="ediv">jQuery Event</div>
+</body>
+</html>
